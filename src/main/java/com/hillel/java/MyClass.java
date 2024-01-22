@@ -8,7 +8,7 @@ public class MyClass {
             // Перевірка на наявність букв
             if (!containsLetters(inputSequence)) {
                 throw new ContentException("Помилка: Послідовність має містити тільки цифри!");
-            } else{
+            } else {
                 printPseudoGraphicsInOneRow(inputSequence);
             }
         } catch (ContentException e) {

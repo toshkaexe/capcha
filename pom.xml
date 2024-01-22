@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-        <groupId>org.springframework</groupId>
-        <artifactId>capcha</artifactId>
-        <version>0.1.0</version>
+    <groupId>org.springframework</groupId>
+    <artifactId>capcha</artifactId>
+    <version>0.1.0</version>
 
 
     <properties>
@@ -33,44 +33,21 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!--   <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-jar-plugin</artifactId>
-                      <version>2.4</version>
-                      <configuration>
-                          <archive>
-                              <manifest> <mainClass>com.hillel.java.MyClass</mainClass>
-                              </manifest>
-                          </archive>
-                      </configuration>
-                  </plugin>-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <phase>
-                                package
-                            </phase>
-                            <goals>
-                                <goal>single</goal>
-                            </goals>
-                            <configuration>
-                                <archive>
-                                    <manifest>
-                                        <mainClass>
-                                            com.hillel.java.MyClass
-                                        </mainClass>
-                                    </manifest>
-                                </archive>
-                                <descriptorRefs>
-                                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                                </descriptorRefs>
-                            </configuration>
-                        </execution>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <mainClass>com.hillel.java.MyClass</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
 
-                    </executions>
                 </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
